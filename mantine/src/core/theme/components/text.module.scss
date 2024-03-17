@@ -1,0 +1,73 @@
+.root {
+  &[data-variant="paragraph1"] {
+    --text-fz: 1.25rem;
+    --text-fw: 400;
+    --text-lh: 140%;
+    letter-spacing: -0.4px;
+  }
+
+  &[data-variant="paragraph2"] {
+    --text-fz: 1rem;
+    --text-fw: 400;
+    --text-lh: 150%;
+    letter-spacing: -0.32px;
+  }
+
+  &[data-variant="paragraph3"] {
+    --text-fz: 0.75rem;
+    --text-fw: 400;
+    --text-lh: 166%;
+    letter-spacing: -0.24px;
+  }
+
+  &[data-variant="button"] {
+    --text-fz: 1.25rem;
+    --text-fw: 400;
+    --text-lh: 120%;
+    letter-spacing: -0.4px;
+  }
+
+  &[data-variant="button2"] {
+    --text-fz: 1rem;
+    --text-fw: 400;
+    --text-lh: 125%;
+    letter-spacing: -0.32px;
+  }
+
+  &[data-variant="underlined"] {
+    --text-fz: 1.25rem;
+    --text-fw: 400;
+    --text-lh: 120%;
+    letter-spacing: -0.4px;
+    text-decoration: underline;
+  }
+
+  &[data-variant="text"] {
+    --text-fz: 3rem;
+    --text-fw: 400;
+    --text-lh: 116%;
+    letter-spacing: -0.96px;
+  }
+
+  &[data-variant="outlined"] {
+    font-family: sans-serif;
+    --text-fz: 3rem;
+    --text-fw: 400;
+    --text-lh: 116%;
+    letter-spacing: -0.96px;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+}
+
+@include media-sm {
+  .root {
+    &[data-variant="text"] {
+      --text-fz: 1.75rem;
+      --text-fw: 400;
+      --text-lh: 114%;
+      letter-spacing: -0.56px;
+    }
+  }
+}

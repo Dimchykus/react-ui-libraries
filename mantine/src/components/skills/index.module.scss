@@ -1,0 +1,44 @@
+.skill {
+  width: rem(186px);
+  height: rem(186px);
+  border: 2px solid;
+  border-color: var(--mantine-color-black);
+  border-radius: var(--mantine-radius-sm);
+  color: var(--mantine-color-black-text);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  path {
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    background: var(--mantine-color-black);
+    color: var(--mantine-color-white-text);
+    border-color: var(--mantine-color-black);
+
+    path {
+      filter: invert(1);
+    }
+  }
+}
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 186px);
+  gap: 2.5rem;
+  justify-content: space-between;
+}
+
+@include media-md {
+  .skillsContainer {
+    grid-template-columns: repeat(auto-fit, 160px);
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .skill {
+    width: rem(160px);
+    height: rem(160px);
+  }
+}

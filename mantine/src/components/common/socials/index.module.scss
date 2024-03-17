@@ -1,0 +1,29 @@
+.social {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 2px solid;
+  border-color: var(--mantine-primary-color-4);
+  border-radius: var(--mantine-radius-sm);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mantine-color-white-4);
+
+  &:hover {
+    background: var(--mantine-primary-color-4);
+    color: var(--mantine-color-white-4);
+
+    & svg path {
+      fill: var(--mantine-color-white-4);
+    }
+  }
+}
+
+@include media-sm {
+  .social {
+    width: 3rem;
+    height: 3rem;
+  }
+}

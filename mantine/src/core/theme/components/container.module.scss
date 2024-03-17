@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  padding: 0 7rem !important;
+  margin: 0 auto;
+}
+
+@include media-md {
+  .container {
+    padding: 0 4rem !important;
+  }
+}
+
+@include media-sm {
+  .container {
+    padding: 0 1rem !important;
+  }
+}

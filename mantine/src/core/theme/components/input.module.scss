@@ -1,0 +1,9 @@
+.wrapper {
+  .input {
+    border: 2px solid var(--mantine-color-black);
+
+    &::placeholder {
+      color: var(--mantine-color-zinc-4);
+    }
+  }
+}
