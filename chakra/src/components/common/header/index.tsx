@@ -1,6 +1,6 @@
 "use client";
 
-import useHeader from "@/app/hooks/useHeader";
+import useHeader from "@/hooks/useHeader";
 import {
   Flex,
   Box,

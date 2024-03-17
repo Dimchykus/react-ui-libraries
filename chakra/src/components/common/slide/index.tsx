@@ -1,4 +1,4 @@
-import useOnScreen from "@/app/hooks/useOnScreen";
+import useOnScreen from "@/hooks/useOnScreen";
 import { Box, Slide as ChakraSlide } from "@chakra-ui/react";
 import { ReactNode, useEffect, useRef, useState } from "react";
 

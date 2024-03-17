@@ -1,10 +1,9 @@
 "use client";
 
 import { Sora } from "next/font/google";
-import { ChakraBaseProvider, Container } from "@chakra-ui/react";
-import theme from "@/app/core/theme";
-import Header from "./components/common/header";
-import Footer from "./components/common/footer";
+import { ChakraBaseProvider, theme } from "@chakra-ui/react";
+import Header from "@/components/common/header";
+import Footer from "@/components/common/footer";
 
 const inter = Sora({ subsets: ["latin"] });
 

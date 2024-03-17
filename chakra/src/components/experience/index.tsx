@@ -1,9 +1,9 @@
 import { Flex, Box, Text, Heading, Container } from "@chakra-ui/react";
 import Socials from "../common/socials";
 import Company from "./company";
-import youtube from "../../../../public/images/youtube.png";
-import google from "../../../../public/images/google.png";
-import apple from "../../../../public/images/apple.png";
+import youtube from "../../../public/images/youtube.png";
+import google from "../../../public/images/google.png";
+import apple from "../../../public/images/apple.png";
 import { StaticImageData } from "next/image";
 
 export interface ICompany {

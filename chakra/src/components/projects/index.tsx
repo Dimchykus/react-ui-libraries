@@ -3,9 +3,9 @@
 import { Flex, Box, Text, Heading, Container, Grid } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import Project, { IProject } from "../project";
-import projectImg1 from "../../../../public/images/project1.jpeg";
-import projectImg2 from "../../../../public/images/project2.jpeg";
-import projectImg3 from "../../../../public/images/project3.jpeg";
+import projectImg1 from "../../../public/images/project1.jpeg";
+import projectImg2 from "../../../public/images/project2.jpeg";
+import projectImg3 from "../../../public/images/project3.jpeg";
 
 const projects: IProject[] = [
   {

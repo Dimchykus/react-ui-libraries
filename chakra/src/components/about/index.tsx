@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
-import img from "../../../../public/images/about.png";
+import img from "../../../public/images/about.png";
 
 const ChakraImg = chakra(Image);
 

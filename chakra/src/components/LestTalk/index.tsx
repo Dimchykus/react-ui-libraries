@@ -5,7 +5,7 @@ import Input from "../common/input";
 import { useForm } from "react-hook-form";
 import { object, string } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import theme from "@/app/core/theme";
+import theme from "@/core/theme";
 
 let schema = object({
   name: string().required().max(70, "Name is too long"),
