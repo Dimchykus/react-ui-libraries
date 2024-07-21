@@ -31,8 +31,8 @@ const Project: React.FC<Props> = ({ reverse, project }) => {
     <Flex
       bg={"primary.black"}
       justifyContent={"space-between"}
-      mb={["4.75rem", "6.5rem"]}
-      gap={[7, "8.625rem"]}
+      mb={["4.75rem", "8.625rem"]}
+      gap={[7, "6.5rem"]}
       direction={{ base: "column", sm: reverse ? "row-reverse" : "row" }}
     >
       <Box
@@ -41,8 +41,7 @@ const Project: React.FC<Props> = ({ reverse, project }) => {
         sx={{
           overflow: "hidden",
           borderRadius: "2xl",
-          boxShadow:
-            "0px 12px 42px -4px rgba(24, 39, 75, 0.12), 0px 8px 18px -6px rgba(24, 39, 75, 0.12)",
+          boxShadow: "md",
         }}
       >
         <ChakraImage

@@ -3,6 +3,12 @@ import buttonStyles from "./button.module.scss";
 
 const ButtonStyles = Button.extend({
   classNames: buttonStyles,
+  styles: {
+    root: {
+      borderWidth: rem(2),
+      letterSpacing: "0.02em",
+    },
+  },
   defaultProps: {
     size: "medium",
   },
@@ -12,12 +18,12 @@ const ButtonStyles = Button.extend({
         root: {
           "--button-height": rem(56),
           "--button-width": "auto",
-          "--button-padding-x": rem(19),
-          "--button-fz": "1.25rem",
+          "--button-padding-x": rem(18),
+          "--button-fz": theme.fontSizes.lg,
           "--button-fw": 400,
           "--button-lh": "120%",
-          "--button-lts": "-0.4px",
           "--_button-padding-right": "var(--button-padding-x)",
+          "--button-bg": "var(--mantine-primary-color-4)",
         },
       };
     }
@@ -28,11 +34,12 @@ const ButtonStyles = Button.extend({
           "--button-height": rem(48),
           "--button-width": "auto",
           "--button-padding-x": rem(15),
-          "--button-fz": "1rem",
+          "--button-fz": theme.fontSizes.md,
           "--button-fw": 400,
           "--button-lh": "125%",
           "--button-lts": "-0.32px",
           "--_button-padding-right": "var(--button-padding-x)",
+          "--button-bg": "var(--mantine-primary-color-4)",
           //other props
           // --button-height-xs: calc(1.875rem* var(--mantine-scale));
           // --button-height-sm: calc(2.25rem* var(--mantine-scale));

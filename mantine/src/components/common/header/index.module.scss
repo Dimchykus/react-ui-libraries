@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  //   z-index: theme.zIndex.appBar;
+  z-index: var(--mantine-z-index-header);
   backdrop-filter: blur(10px);
 
   &.visible {
@@ -28,11 +28,6 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-.logoBlock {
-  align-items: center;
-  gap: rem(12px);
 }
 
 .links {

@@ -24,14 +24,25 @@ const Company: React.FC<Props> = ({ company }) => {
         borderColor: "zinc.800",
       }}
     >
-      <Flex mb={7} justifyContent={"space-between"} alignItems={"center"}>
+      <Flex
+        mb={7}
+        justifyContent={"space-between"}
+        flexDir={["column", "row"]}
+        gap={[30, 0]}
+        alignItems={["flex-start", "center"]}
+        sx={{
+          img: {
+            height: "32px",
+          },
+        }}
+      >
         <Flex alignItems={"center"} gap={7}>
           <Image src={company.img} alt={company.title} />
           <Text textStyle={"h4"} fontWeight={600} color="primary.white">
             {company.title}
           </Text>
         </Flex>
-        <Text textStyle={"h6"} color="zinc.300">
+        <Text textStyle={"h6"} color="zinc.300" fontWeight="normal">
           {company.date}
         </Text>
       </Flex>

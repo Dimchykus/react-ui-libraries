@@ -42,7 +42,15 @@ const Experience = () => {
     <Box bg={"primary.black"} color={"primary.white"} py={[20]}>
       <Container>
         <Box px={[0, 6]}>
-          <Flex gap={4} flexWrap={"wrap"} justifyContent={"center"} mb={20}>
+          <Flex
+            display="flex"
+            gap={4}
+            flexWrap="wrap"
+            columnGap={4}
+            rowGap={[3, 5]}
+            justifyContent={"center"}
+            mb={[10, 20]}
+          >
             <Heading>My</Heading>
             <Heading fontWeight={800}>Experience</Heading>
           </Flex>

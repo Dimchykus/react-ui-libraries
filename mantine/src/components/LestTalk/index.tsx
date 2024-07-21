@@ -3,7 +3,7 @@ import Socials from "../common/socials";
 import Button from "../common/button";
 import Input from "../common/input";
 import useIsMobile from "@/hooks/useIsMobile";
-import { useForm, isNotEmpty, isEmail, hasLength } from "@mantine/form";
+import { useForm, isNotEmpty, isEmail, hasLength, Form } from "@mantine/form";
 
 type FormData = {
   name: string;
@@ -41,33 +41,34 @@ const LetsTalk = () => {
       gap={{ base: 44, sm: 80, md: 108 }}
       py={64}
     >
-      <form onSubmit={form.onSubmit((values) => console.log(values))}>
-        <Flex
-          direction={"column"}
-          gap={20}
-          align={"stretch"}
-          flex={{ base: "auto", sm: "0 1 500px" }}
-        >
-          <Input placeholder="Your name" {...form.getInputProps("name")} />
-          <Input placeholder="Email" {...form.getInputProps("email")} />
-          <Input
-            placeholder="Your website (If exists)"
-            {...form.getInputProps("url")}
-          />
-          <Input
-            type="textarea"
-            placeholder="How can I help?*"
-            size="lg"
-            {...form.getInputProps("description")}
-          />
-          <Flex wrap="wrap" gap={24}>
-            <Button fw={500} size={isMobile ? "small" : "medium"} type="submit">
-              Get In Touch
-            </Button>
-            <Socials gap={24} />
+      <Box flex={{ base: "auto", sm: "0 1 500px" }}>
+        <form onSubmit={form.onSubmit((values) => console.log(values))}>
+          <Flex direction={"column"} gap={20} align={"stretch"}>
+            <Input placeholder="Your name" {...form.getInputProps("name")} />
+            <Input placeholder="Email" {...form.getInputProps("email")} />
+            <Input
+              placeholder="Your website (If exists)"
+              {...form.getInputProps("url")}
+            />
+            <Input
+              type="textarea"
+              placeholder="How can I help?*"
+              size="lg"
+              {...form.getInputProps("description")}
+            />
+            <Flex wrap="wrap" gap={24}>
+              <Button
+                fw={500}
+                size={isMobile ? "small" : "medium"}
+                type="submit"
+              >
+                Get In Touch
+              </Button>
+              <Socials gap={24} />
+            </Flex>
           </Flex>
-        </Flex>
-      </form>
+        </form>
+      </Box>
       <Box flex={1}>
         <Title variant="text">
           <Text component="span" variant="text" fw={800}>
@@ -87,20 +88,17 @@ const LetsTalk = () => {
           variant="paragraph2"
           mt={{ base: 32, sm: 20 }}
           mb={{ base: 32, sm: 40 }}
+          c='zinc.4'
         >
           I seek to push the limits of creativity to create high-engaging,
           user-friendly, and memorable interactive experiences.
         </Text>
-        <Text
-          variant={isMobile ? "h5" : "h3"}
-          fw={800}
-          mb={{ base: 12, sm: 16 }}
-        >
+        <Title order={isMobile ? 5 : 3} fw={800} mb={{ base: 12, sm: 16 }}>
           Dimhukys@gmail.com
-        </Text>
-        <Text variant={isMobile ? "h5" : "h3"} fw={800}>
+        </Title>
+        <Title order={isMobile ? 5 : 3} fw={800}>
           1234567890
-        </Text>
+        </Title>
       </Box>
     </Flex>
   );

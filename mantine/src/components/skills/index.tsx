@@ -65,9 +65,9 @@ const Skills = () => {
         justify={"center"}
       >
         {icon}
-        <Text fw={700} variant={"h5"}>
+        <Title fw={700} order={5}>
           {text}
-        </Text>
+        </Title>
       </Flex>
     );
   };

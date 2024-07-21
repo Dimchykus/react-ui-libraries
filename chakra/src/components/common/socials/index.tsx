@@ -6,7 +6,11 @@ import ReditSvg from "@/../public/images/redit.svg";
 import DiscordSvg from "@/../public/images/discord.svg";
 import FacebookSvg from "@/../public/images/facebook.svg";
 
-const Socials = () => {
+interface Props {
+  size?: "sm";
+}
+
+const Socials: React.FC<Props> = ({ size }) => {
   const social = (Icon?: any) => {
     return (
       <Center
@@ -14,7 +18,6 @@ const Socials = () => {
         h={[12, 14]}
         border={"2px solid"}
         borderColor={"primary.black"}
-        // у px, rem не працює
         borderRadius={4}
         transition={"all 0.2s ease-in-out"}
         cursor={"pointer"}
@@ -33,7 +36,7 @@ const Socials = () => {
   };
 
   return (
-    <Flex alignItems={"center"} gap={[6, 8]}>
+    <Flex alignItems={"center"} gap={[6, size === "sm" ? 6 : 8]}>
       {social(FacebookSvg)}
       {social(ReditSvg)}
       {social(TwitterSvg)}

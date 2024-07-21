@@ -9,7 +9,7 @@ import LetsTalk from "@/components/LestTalk";
 export default function Home() {
   return (
     <main>
-      <Container>
+      <Container variant={"container"}>
         <Hero />
         <Skills />
       </Container>

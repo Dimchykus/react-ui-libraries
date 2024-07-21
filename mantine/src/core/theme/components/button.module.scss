@@ -1,5 +1,4 @@
 .root {
-  // variants
   &[data-variant="link"] {
     padding: 0;
     background: transparent;
@@ -9,10 +8,6 @@
       background: transparent;
     }
   }
-
-  // default
-  --button-bg: var(--mantine-primary-color-4);
-  --button-color: var(--mantine-color-bright);
 
   path {
     fill: var(--mantine-color-white-text);
@@ -26,6 +21,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: rem(2);
   }
 }

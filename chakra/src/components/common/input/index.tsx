@@ -1,40 +1,50 @@
-import { Box, Text, Input as ChakraInput, InputProps } from "@chakra-ui/react";
+import {
+  Box,
+  Input as ChakraInput,
+  FormErrorMessage,
+  Textarea,
+  Text,
+} from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { Control, Path, useController } from "react-hook-form";
 
-interface Props<T extends InputProps> {
-  control?: Control<T, any, T>;
-  name: Path<T>;
-  error?: string;
+interface Props {
   children?: ReactNode;
+  name: string;
+  placeholder: string;
+  value?: string;
+  error?: string;
+  type?: string;
+  onChange?: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
 }
 
-const Input = <T extends InputProps>({
+const Input = ({
   children,
-  error,
-  control,
   name,
-  ...rest
-}: Props<T>) => {
-  const {
-    field: { value, onChange, ref, onBlur },
-    fieldState: { error },
-  } = useController<T>({ control, name });
+  value,
+  placeholder,
+  error,
+  type,
+  onChange,
+}: Props) => {
+  const Component = type === "textarea" ? Textarea : ChakraInput;
 
+  console.log("error", error);
   return (
     <Box>
-      <ChakraInput
-        {...rest}
+      <Component
+        name={name}
         value={value}
-        onChange={onChange}
-        inputRef={ref}
-        onBlur={onBlur}
+        placeholder={placeholder}
         errorBorderColor={"error.500"}
+        onChange={onChange}
+        type={type}
       >
         {children}
-      </ChakraInput>
-      {error && (
-        <Text mt={3} textStyle={"h6"} color={"error.500"}>
+      </Component>
+      {!!error && (
+        <Text color="error.500" mt={2}>
           {error}
         </Text>
       )}

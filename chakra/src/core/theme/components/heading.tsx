@@ -1,11 +1,52 @@
 import { defineStyleConfig } from "@chakra-ui/react";
 
 const Heading = defineStyleConfig({
-  baseStyle: {
-    fontSize: ["28px", "48px"],
-    fontWeight: "400",
-    lineHeight: "122",
-    letterSpacing: "-0.96px",
+  defaultProps: {
+    size: "text",
+  },
+  sizes: {
+    text: {
+      fontSize: ["2xl", "6xl"],
+      fontWeight: "400",
+      lineHeight: "122",
+      letterSpacing: "tight",
+    },
+    h1: {
+      fontSize: "4xl",
+      fontWeight: "bold",
+      lineHeight: "122",
+      letterSpacing: "tight",
+    },
+    h2: {
+      fontSize: "3xl",
+      fontWeight: "bold",
+      lineHeight: "tall",
+      letterSpacing: "tight",
+    },
+    h3: {
+      fontSize: "2xl",
+      fontWeight: "bold",
+      lineHeight: "shorter",
+      letterSpacing: "tight",
+    },
+    h4: {
+      fontSize: "xl",
+      fontWeight: "bold",
+      lineHeight: "short",
+      letterSpacing: "tight",
+    },
+    h5: {
+      fontSize: "lg",
+      fontWeight: "bold",
+      lineHeight: "base",
+      letterSpacing: "tight",
+    },
+    h6: {
+      fontSize: "md",
+      fontWeight: "bold",
+      lineHeight: "tall",
+      letterSpacing: "tight",
+    },
   },
   variants: {
     outlined: {

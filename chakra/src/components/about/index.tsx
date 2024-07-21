@@ -39,7 +39,15 @@ const About: React.FC = () => {
         />
       </Box>
       <Box flex={"1 1 610px"}>
-        <Flex gap={4} flexWrap={"wrap"} mb={10} pt={5}>
+        <Flex
+          display="flex"
+          gap={4}
+          flexWrap="wrap"
+          columnGap={4}
+          rowGap={[3, 5]}
+          mb={10}
+          pt={5}
+        >
           <Heading>About</Heading>
           <Heading fontWeight={800}>Me</Heading>
         </Flex>

@@ -21,8 +21,8 @@ const Project: React.FC<Props> = ({ reverse, project }) => {
     <Flex
       direction={{ base: "column", sm: reverse ? "row-reverse" : "row" }}
       justify={"space-between"}
-      mb={{ base: 76, sm: 104 }}
-      gap={{ base: 28, sm: 138 }}
+      mb={{ base: 76, sm: 138 }}
+      gap={{ base: 28, sm: 104 }}
     >
       <Box
         w={{ base: "100%", sm: "auto" }}

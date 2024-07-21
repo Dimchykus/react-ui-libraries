@@ -1,12 +1,10 @@
 "use client";
 
-import { Sora } from "next/font/google";
-import theme from "@/app/core/theme";
-import Header from "./components/common/header";
-import Footer from "./components/common/footer";
+import theme from "@/core/theme";
+import Header from "../components/common/header";
+import Footer from "../components/common/footer";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 
-const sora = Sora({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -15,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={sora.className}>
+      <body>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Header />

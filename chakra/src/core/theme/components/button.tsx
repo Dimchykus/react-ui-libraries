@@ -9,7 +9,9 @@ const Button = defineStyleConfig({
     borderWidth: 2,
     borderStyle: "solid",
     borderColor: "primary.black",
-    fontSize: "lg",
+    fontSize: ["md", "lg"],
+    fontWeight: "semibold",
+    letterSpacing: "button",
     _hover: {
       bg: "primary.neutral",
       borderColor: "primary.neutral",
@@ -35,8 +37,8 @@ const Button = defineStyleConfig({
       py: 3,
     },
     md: {
-      px: 5,
-      py: 4,
+      px: "1.125rem",
+      py: "0.875rem",
     },
   },
   defaultProps: {

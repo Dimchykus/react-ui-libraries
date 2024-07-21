@@ -1,14 +1,7 @@
 "use client";
 
 import useHeader from "@/hooks/useHeader";
-import {
-  Box,
-  Text,
-  Stack,
-  Button as MantineButton,
-  Flex,
-  Title,
-} from "@mantine/core";
+import { Box, Flex, Title } from "@mantine/core";
 import Menu from "@/../public/images/menu.svg";
 import Button from "../button";
 import Download from "@/../public/images/download.svg";
@@ -31,29 +24,26 @@ const Header = () => {
       py={{ base: 16, sm: 20, md: 24 }}
     >
       <Box display={"flex"} className={styles.headerContent} w="100%">
-        <Box display="flex" className={styles.logoBlock}>
-          {/* {backgroundImg} */}
+        <Flex display="flex" gap={12} align={"center"}>
           <Logo />
           <Title order={5} fw={700}>
             Personal
           </Title>
-        </Box>
+        </Flex>
         <Box display={{ base: "none", sm: "flex" }}>
           <Flex className={styles.links} gap={32}>
-            <Button variant={"link"} component="a" href={"#"}>
-              <Title order={5} fw={700} component={"span"}>
-                About Me
-              </Title>
-            </Button>
-            <Button variant={"link"} fw={"600"} component="a" href={"#"}>
+            <Title order={5} fw={"600"}>
+              About Me
+            </Title>
+            <Title order={5} fw={"600"}>
               Skills
-            </Button>
-            <Button variant={"link"} fw={"600"} component="a" href={"#"}>
+            </Title>
+            <Title order={5} fw={"600"}>
               Project
-            </Button>
-            <Button variant={"link"} fw={"600"} component="a" href={"#"}>
+            </Title>
+            <Title order={5} fw={"600"}>
               Contact Me
-            </Button>
+            </Title>
           </Flex>
         </Box>
         <Box display={{ base: "none", sm: "flex" }}>

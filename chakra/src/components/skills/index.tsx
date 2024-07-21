@@ -55,8 +55,8 @@ const Skills = () => {
   const getSkill = (text: string, icon?: ReactNode) => {
     return (
       <Flex
-        w={44}
-        h={44}
+        w={[160, 186]}
+        h={[160, 186]}
         border={"2px solid"}
         borderColor={"primary.black"}
         // у px, rem не працює
@@ -92,13 +92,23 @@ const Skills = () => {
 
   return (
     <Box mb={25}>
-      <Flex gap={4} flexWrap={"wrap"} justifyContent={"center"} mb={20}>
+      <Flex
+        display="flex"
+        flexWrap="wrap"
+        columnGap={4}
+        rowGap={[3, 5]}
+        justifyContent={"center"}
+        mb={[10, 20]}
+      >
         <Heading>My</Heading>
         <Heading fontWeight={800}>Skills</Heading>
       </Flex>
       <Grid
-        gridTemplateColumns={"repeat(auto-fit, 186px)"}
-        gap={10}
+        gridTemplateColumns={[
+          "repeat(auto-fit, 160px)",
+          "repeat(auto-fit, 186px)",
+        ]}
+        gap={[5, 10]}
         justifyContent={"space-between"}
       >
         {SKILLS.map((skill) => getSkill(skill.text, skill.icon))}

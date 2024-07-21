@@ -36,9 +36,11 @@ const Projects = () => {
     <Box bg={"primary.black"} color={"primary.white"}>
       <Container>
         <Heading
-          display={"flex"}
+          display="flex"
           gap={4}
-          flexWrap={"wrap"}
+          flexWrap="wrap"
+          columnGap={4}
+          rowGap={[3, 5]}
           justifyContent={"center"}
           pb={{ base: 10, sm: 24 }}
           pt={{ base: 15, sm: 20 }}

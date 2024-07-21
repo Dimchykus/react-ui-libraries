@@ -14,7 +14,7 @@ const InputStyles = Input.extend({
         "--_input-padding": rem(24),
         "--_input-padding-left": "var(--_input-padding)",
         "--_input-padding-right": "var(--_input-padding)",
-        "--input-height-md": rem(56),
+        "--input-height-md": rem(60),
         "--input-height-lg": rem(140),
         "--input-padding-y-md": rem(18),
         "--input-padding-y": "var(--input-padding-y-md)",

@@ -18,6 +18,11 @@ const resolver: CSSVariablesResolver = (theme) => ({
     "--mantine-spacing-md": "1rem",
     "--mantine-spacing-lg": "1.25rem",
     "--mantine-spacing-xl": "2rem",
+    "--mantine-z-index-header": "100",
+    "--mantine-z-index-modal": "200",
+    "--mantine-z-index-popover": "300",
+    "--mantine-z-index-overlay": "400",
+    "--mantine-z-index-max": "9999",
   },
   light: {
     "--mantine-color-black": "var(--mantine-primary-color-4)",

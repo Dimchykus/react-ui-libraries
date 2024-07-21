@@ -1,11 +1,21 @@
-import { Box, Text, useMediaQuery } from "@chakra-ui/react";
+"use client";
+
+import {
+  As,
+  Box,
+  Flex,
+  Heading,
+  Text,
+  chakra,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import Socials from "../common/socials";
 import Button from "../common/button";
 import Input from "../common/input";
-import { useForm } from "react-hook-form";
 import { object, string } from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
-import theme from "@/core/theme";
+import { useFormik } from "formik";
+
+const ChakraForm = chakra("form");
 
 let schema = object({
   name: string().required().max(70, "Name is too long"),
@@ -14,7 +24,7 @@ let schema = object({
   description: string().required().max(500, "Description is too long"),
 });
 
-type FormData = {
+export type FormData = {
   name: string;
   email: string;
   url?: string;
@@ -22,25 +32,33 @@ type FormData = {
 };
 
 const LetsTalk = () => {
-  const {
-    handleSubmit,
-    getValues,
-    control,
-    formState: { errors },
-  } = useForm<FormData>({
-    resolver: yupResolver(schema),
-    reValidateMode: "onBlur",
-    defaultValues: {
-      name: "",
-      email: "",
-      url: "",
-      description: "",
+  const infoSize = useBreakpointValue<As>(
+    {
+      base: "h3",
+      sm: "h5",
+    },
+    {
+      fallback: "h5",
+      ssr: false,
+    }
+  );
+  const initialValues: FormData = {
+    name: "",
+    email: "",
+    url: "",
+    description: "",
+  };
+
+  const { values, handleChange, errors, handleSubmit } = useFormik<FormData>({
+    initialValues: initialValues,
+    validationSchema: schema,
+    onSubmit: (values) => {
+      console.log(values);
     },
   });
-  const onSubmit = handleSubmit((data) => console.log(data));
 
   return (
-    <Box
+    <Flex
       sx={{
         py: [16],
         display: "flex",
@@ -48,96 +66,86 @@ const LetsTalk = () => {
         flexDirection: ["column", "row"],
       }}
     >
-      <Box
+      <ChakraForm
+        onSubmit={handleSubmit}
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "stretch",
           gap: 5,
-          flexBasis: [null, 500],
+          flex: ["auto", "0 1 500px"],
         }}
       >
-        <Input<FormData>
+        <Input
           name="name"
-          control={control}
+          value={values.name}
+          onChange={handleChange}
           placeholder="Your name"
+          error={errors.name}
         />
-        <Input<FormData> name="email" control={control} placeholder="Email" />
-        <Input<FormData>
+        <Input
+          name="email"
+          value={values.email}
+          onChange={handleChange}
+          placeholder="Email"
+          error={errors.email}
+        />
+        <Input
           name="url"
-          control={control}
+          value={values.url}
+          onChange={handleChange}
           placeholder="Your website (If exists)"
+          error={errors.url}
         />
-        <Input<FormData>
-          type="textarea"
+        <Input
           name="description"
-          control={control}
+          value={values.description}
+          onChange={handleChange}
           placeholder="How can I help?*"
+          error={errors.description}
+          type="textarea"
         />
         <Box display={"flex"} flexWrap="wrap" gap={6}>
-          <Button
-            sx={{
-              fontWeight: 500,
-            }}
-            size={
-              useMediaQuery(theme.breakpoints.down("sm")) ? "small" : "medium"
-            }
-            onClick={onSubmit}
-          >
+          <Button type="submit" fontWeight={500} size={["sm", "md"]}>
             Get In Touch
           </Button>
-          <Socials
-            sx={{
-              gap: 6,
-            }}
-          />
+          <Socials size="sm" />
         </Box>
-      </Box>
+      </ChakraForm>
       <Box flex={1}>
-        <Text
-          display={"flex"}
+        <Heading
+          display="flex"
           gap={4}
-          rowGap={3}
-          flexWrap={"wrap"}
+          flexWrap="wrap"
+          columnGap={4}
+          rowGap={[3, 5]}
           variant="text"
         >
-          <Text component="span" variant="text" fontWeight={800}>
+          <Heading as="span" fontWeight={800}>
             Let’s
-          </Text>
-          <Text component="span" variant="text">
+          </Heading>
+          <Heading as="span" variant={"outlined"}>
             talk
-          </Text>
-          <Text component="span" variant="text" fontWeight={800}>
+          </Heading>
+          <Heading as="span" fontWeight={800}>
             for
-          </Text>
-          <Text
-            component="span"
-            variant="text"
-            fontWeight={800}
-            flexBasis={"100%"}
-          >
+          </Heading>
+          <Heading as="span" fontWeight={800} flexBasis={"100%"}>
             Something special
-          </Text>
-        </Text>
-        <Text variant="paragraph2" mt={[8, 5]} mb={[8, 10]}>
+          </Heading>
+        </Heading>
+        <Text textStyle="paragraph2" mt={[8, 5]} mb={[8, 10]} color="zinc.500">
           I seek to push the limits of creativity to create high-engaging,
           user-friendly, and memorable interactive experiences.
         </Text>
-        <Text
-          variant={useMediaQuery(theme.breakpoints.down("sm")) ? "h5" : "h3"}
-          fontWeight={800}
-          mb={[3, 4]}
-        >
+        <Heading size={["h5", "h3"]} fontWeight={800} mb={[3, 4]}>
           Dimhukys@gmail.com
-        </Text>
-        <Text
-          variant={useMediaQuery(theme.breakpoints.down("sm")) ? "h5" : "h3"}
-          fontWeight={800}
-        >
+        </Heading>
+        <Heading size={["h5", "h3"]} fontWeight={800}>
           1234567890
-        </Text>
+        </Heading>
       </Box>
-    </Box>
+    </Flex>
   );
 };
 

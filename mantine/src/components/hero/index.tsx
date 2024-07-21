@@ -14,20 +14,20 @@ const Hero = () => {
   return (
     <Box
       pb={{ base: 104, sm: 116 }}
-      pt={{ base: 10, sm: "12rem" }}
+      pt={{ base: 40, sm: "12rem" }}
       pos="relative"
     >
       <Box
         className={styles.image}
         pos={{ base: "static", sm: "absolute" }}
         w={{ base: "auto", sm: "100%" }}
-        pb={{ base: 12, sm: 0 }}
+        pb={{ base: 48, sm: 0 }}
       >
         <Image src={isMobile ? imgMobile : img} alt="hero" />
       </Box>
       <Box w={{ base: "100%", sm: "600px" }}>
         <Box>
-          <Title component={"h1"} variant="text" className="sectionTitle">
+          <Title component={"h1"}>
             <Text variant="text" component="span">
               Hello I’am
             </Text>
@@ -48,7 +48,7 @@ const Hero = () => {
             </Text>
           </Title>
         </Box>
-        <Text variant={"paragraph2"} mt={32}>
+        <Text variant={"paragraph2"} mt={32} c="zinc.4">
           I&apos;m Evren Shah Lorem Ipsum is simply dummy text of the printing
           and typesetting industry. Lorem Ipsum has been the industry&rsquo;s
           standard dummy text ever since the 1500s, when an unknown printer took

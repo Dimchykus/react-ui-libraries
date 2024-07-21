@@ -1,36 +1,22 @@
 .root {
   display: flex;
-  gap: 1rem;
+  gap: rem(16px);
+  row-gap: rem(20px);
   flex-wrap: wrap;
   row-gap: 1.25rem;
 
-  &:is(h1) {
-    letter-spacing: -0.72px;
-  }
-
-  &:is(h2) {
-    letter-spacing: -0.64px;
-  }
-
-  &:is(h3) {
-    letter-spacing: -0.56px;
-  }
-
-  &:is(h4) {
-    letter-spacing: -0.48px;
-  }
-
-  &:is(h5) {
-    letter-spacing: -0.4px;
-  }
-
+  &:is(h1),
+  &:is(h2),
+  &:is(h3),
+  &:is(h4),
+  &:is(h5),
   &:is(h6) {
-    letter-spacing: -0.32px;
+    letter-spacing: -0.02em;
   }
 }
 
 @include media-sm {
   .root {
-    row-gap: 0.75rem;
+    row-gap: rem(12px);
   }
 }

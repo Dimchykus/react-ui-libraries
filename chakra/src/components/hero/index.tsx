@@ -1,11 +1,9 @@
 "use client";
 
 import {
-  Flex,
   Box,
   Text,
   Heading,
-  Container,
   SystemStyleObject,
   useBreakpointValue,
   Center,
@@ -15,9 +13,6 @@ import Socials from "../common/socials";
 import img from "@/../public/images/hero.png";
 import imgMobile from "@/../public/images/heroMobile.png";
 import Image, { StaticImageData } from "next/image";
-import Button from "../common/button";
-import FacebookSvg from "@/../public/images/facebook.svg";
-import Input from "../common/input";
 
 const ChakraImage = chakra(Image);
 
@@ -41,7 +36,7 @@ const Hero = () => {
   );
 
   return (
-    <Box pb={[16]} pt={[10, 190]} position={"relative"}>
+    <Box pb={[112]} pt={[10, 190]} position={"relative"}>
       <Center
         sx={imageStyle}
         position={["static", "absolute"]}
@@ -50,15 +45,23 @@ const Hero = () => {
         pb={[12, 0]}
         maxH={"596px"}
       >
-        <ChakraImage src={backgroundImg ?? ""} alt="hero" />
+        <ChakraImage
+          src={backgroundImg ?? ""}
+          alt="hero"
+          width={["100%", "889px"]}
+          height={[332, "596px"]}
+          objectFit={["contain", null]}
+          maxW="unset"
+        />
       </Center>
       <Box w={["100%", "600px"]}>
         <Heading
-          display={"flex"}
+          display="flex"
           gap={4}
-          flexWrap={"wrap"}
-          columnGap={[3, 5]}
-          as={"h1"}
+          flexWrap="wrap"
+          columnGap={4}
+          rowGap={[3, 5]}
+          as="h1"
         >
           <Heading as={"span"}>Hello I’am</Heading>
           <Heading fontWeight={800} as={"span"}>
@@ -81,10 +84,6 @@ const Hero = () => {
           standard dummy text ever since the 1500s, when an unknown printer took
           a galley of type and scrambled it to specimen book.
         </Text>
-        {/* <Button rightIcon={<FacebookSvg />}>Resume</Button>
-        <Input value={"Your name"} />
-        <Input error="error" value={"Your name"} isInvalid />
-        <Input isDisabled value={"Your name"} /> */}
       </Box>
       <Box mt={[8, 25]}>
         <Socials />

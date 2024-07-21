@@ -1,9 +1,10 @@
-import { extendBaseTheme, theme as chakraTheme } from "@chakra-ui/react";
+import { extendBaseTheme } from "@chakra-ui/react";
 import Button from "./components/button";
-import Text from "./components/text";
 import Heading from "./components/heading";
 import Container from "./components/container";
 import Input from "./components/input";
+import Textarea from "./components/textarea";
+import typography from "./components/typography";
 
 const theme = extendBaseTheme({
   global: {
@@ -16,10 +17,13 @@ const theme = extendBaseTheme({
   },
   components: {
     Button: Button,
-    Text: Text,
     Heading: Heading,
     Container: Container,
     Input: Input,
+    Textarea: Textarea,
+  },
+  shadows: {
+    md: "0 12px 42px -4px rgba(24, 39, 75, 0.12), 0 8px 18px -6px rgba(24, 39, 75, 0.12);",
   },
   colors: {
     primary: {
@@ -40,8 +44,10 @@ const theme = extendBaseTheme({
     },
   },
   space: {
+    11: "2.75rem",
     15: "3.75rem",
     25: "6.25rem",
+    27: "6.75rem",
   },
   breakpoints: {
     sm: "48rem",
@@ -71,95 +77,13 @@ const theme = extendBaseTheme({
     none: "0",
     sm: "4px",
     base: "8px",
-    md: "12px",
+    md: "10px",
     lg: "16px",
     xl: "24px",
     "2xl": "40px",
     "3xl": "64px",
   },
-  border: {},
-  textStyles: {
-    h1: {
-      fontSize: "4xl",
-      fontWeight: "normal",
-      lineHeight: "122",
-      letterSpacing: "xl",
-    },
-    h2: {
-      fontSize: "3xl",
-      fontWeight: "normal",
-      lineHeight: "tall",
-      letterSpacing: "widest",
-    },
-    h3: {
-      fontSize: "2xl",
-      fontWeight: "normal",
-      lineHeight: "shorter",
-      letterSpacing: "wider",
-    },
-    h4: {
-      fontSize: "xl",
-      fontWeight: "normal",
-      lineHeight: "short",
-      letterSpacing: "wide",
-    },
-    h5: {
-      fontSize: "lg",
-      fontWeight: "normal",
-      lineHeight: "base",
-      letterSpacing: "normal",
-    },
-    h6: {
-      fontSize: "md",
-      fontWeight: "normal",
-      lineHeight: "tall",
-      letterSpacing: "tight",
-    },
-    paragraph1: {
-      fontSize: "lg",
-      fontWeight: "normal",
-      lineHeight: "140",
-      letterSpacing: "normal",
-    },
-    paragraph2: {
-      fontSize: "md",
-      fontWeight: "normal",
-      lineHeight: "taller",
-      letterSpacing: "tight",
-    },
-    paragraph3: {
-      fontSize: "sm",
-      fontWeight: "normal",
-      lineHeight: "xl",
-      letterSpacing: "tighter",
-    },
-    button: {
-      fontSize: "lg",
-      fontWeight: "normal",
-      lineHeight: "shorter",
-      letterSpacing: "normal",
-    },
-    button2: {
-      fontSize: "md",
-      fontWeight: "normal",
-      lineHeight: "tall",
-      letterSpacing: "tight",
-    },
-    underlined: {
-      fontSize: "lg",
-      fontWeight: "normal",
-      lineHeight: "base",
-      letterSpacing: "normal",
-      textDecoration: "underline",
-    },
-    outlined: {
-      fontSize: "lg",
-      fontWeight: "normal",
-      lineHeight: "base",
-      letterSpacing: "normal",
-      textDecoration: "underline",
-    },
-  },
+  textStyles: typography,
   fontSizes: {
     xs: "0.75rem",
     sm: "0.875rem",
@@ -194,23 +118,11 @@ const theme = extendBaseTheme({
     "140": 1.4,
     taller: 1.5,
     xl: 1.66,
-    "3": ".75rem",
-    "4": "1rem",
-    "5": "1.25rem",
-    "6": "1.5rem",
-    "7": "1.75rem",
-    "8": "2rem",
-    "9": "2.25rem",
-    "10": "2.5rem",
   },
   letterSpacings: {
-    tighter: "-0.015em", // 0.24
-    tight: "-0.02em", //0.32
-    normal: "-0.025em", //0.4
-    wide: "-0.03em", // -0.48px
-    wider: "-0.035em", //-0.56px
-    widest: "-0.04em", //-0.64px
-    xl: "-0.045em", //-0.72px
+    tight: "-0.02em",
+    normal: "0.02em",
+    button: "0.02em",
   },
 });
 

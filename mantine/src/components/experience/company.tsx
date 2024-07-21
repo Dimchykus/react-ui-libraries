@@ -17,14 +17,17 @@ const Company: React.FC<Props> = ({ company }) => {
         justify={"space-between"}
         align={{ base: "flex-start", sm: "center" }}
         className={styles.title}
+        gap={{ base: 30, sm: 0 }}
       >
         <Flex display={"flex"} align={"center"} gap={28}>
           <Image src={company.img} alt={company.title} />
-          <Title order={isMobile ? 5 : 4} variant={"h4"} fw={600}>
+          <Title order={4} variant={"h4"} fw={600}>
             {company.title}
           </Title>
         </Flex>
-        <Text variant={"h6"}>{company.date}</Text>
+        <Text variant={"h6"} c="zinc">
+          {company.date}
+        </Text>
       </Flex>
       <Text variant={"paragraph2"} c="zinc">
         {company.description}

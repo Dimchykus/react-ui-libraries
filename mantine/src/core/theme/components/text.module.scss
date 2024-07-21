@@ -1,73 +1,71 @@
 .root {
-  &[data-variant="paragraph1"] {
-    --text-fz: 1.25rem;
+  &[data-variant="text"] {
+    --text-fz: var(--mantine-font-size-6xl);
     --text-fw: 400;
-    --text-lh: 140%;
-    letter-spacing: -0.4px;
+    --text-lh: var(--mantine-line-height-122);
+    letter-spacing: -0.02em;
+  }
+
+  &[data-variant="paragraph1"] {
+    --text-fz: var(--mantine-font-size-lg);
+    --text-fw: 400;
+    --text-lh: var(--mantine-line-height-140);
+    letter-spacing: 0.02em;
   }
 
   &[data-variant="paragraph2"] {
-    --text-fz: 1rem;
+    --text-fz: var(--mantine-font-size-md);
     --text-fw: 400;
-    --text-lh: 150%;
-    letter-spacing: -0.32px;
+    --text-lh: var(--mantine-line-height-taller);
+    letter-spacing: 0.02em;
   }
 
   &[data-variant="paragraph3"] {
-    --text-fz: 0.75rem;
+    --text-fz: var(--mantine-font-size-xs);
     --text-fw: 400;
-    --text-lh: 166%;
-    letter-spacing: -0.24px;
+    --text-lh: var(--mantine-line-height-xl);
+    letter-spacing: 0.02em;
   }
 
   &[data-variant="button"] {
-    --text-fz: 1.25rem;
+    --text-fz: var(--mantine-font-size-lg);
     --text-fw: 400;
-    --text-lh: 120%;
-    letter-spacing: -0.4px;
+    --text-lh: var(--mantine-line-height-base);
+    letter-spacing: 0.02em;
   }
 
   &[data-variant="button2"] {
-    --text-fz: 1rem;
+    --text-fz: var(--mantine-font-size-md);
     --text-fw: 400;
-    --text-lh: 125%;
-    letter-spacing: -0.32px;
+    --text-lh: var(--mantine-line-height-tall);
+    letter-spacing: 0.02em;
   }
 
   &[data-variant="underlined"] {
-    --text-fz: 1.25rem;
+    --text-fz: var(--mantine-font-size-lg);
     --text-fw: 400;
-    --text-lh: 120%;
-    letter-spacing: -0.4px;
+    --text-lh: var(--mantine-line-height-base);
+    letter-spacing: 0.02em;
     text-decoration: underline;
-  }
-
-  &[data-variant="text"] {
-    --text-fz: 3rem;
-    --text-fw: 400;
-    --text-lh: 116%;
-    letter-spacing: -0.96px;
   }
 
   &[data-variant="outlined"] {
     font-family: sans-serif;
-    --text-fz: 3rem;
+    --text-fz: var(--mantine-font-size-6xl);
     --text-fw: 400;
-    --text-lh: 116%;
-    letter-spacing: -0.96px;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    --text-lh: var(--mantine-line-height-122);
+    letter-spacing: -0.02em;
+    -webkit-text-fill-color: var(--mantine-color-white);
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: var(--mantine-color-black);
   }
 }
 
 @include media-sm {
   .root {
-    &[data-variant="text"] {
-      --text-fz: 1.75rem;
-      --text-fw: 400;
-      --text-lh: 114%;
-      letter-spacing: -0.56px;
+    &[data-variant="text"],
+    &[data-variant="outlined"] {
+      --text-fz: var(--mantine-font-size-2xl);
     }
   }
 }

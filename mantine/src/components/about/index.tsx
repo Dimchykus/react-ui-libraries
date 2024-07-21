@@ -8,7 +8,7 @@ import styles from "./index.module.scss";
 const About: React.FC = () => {
   return (
     <Flex
-      gap={{ base: 11, sm: 15, md: 40, lg: 80 }}
+      gap={{ base: 20, md: 40, lg: 80 }}
       justify={"center"}
       direction={{ base: "column", sm: "row" }}
       align={{ base: "center", sm: "flex-start" }}

@@ -1,4 +1,5 @@
 export * from "@mantine/core";
+export { MantineTheme as MantineThemeOld } from "@mantine/core";
 
 type ExtendedCustomColors =
   | "black"
