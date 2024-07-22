@@ -14,7 +14,6 @@ const Footer = () => (
     sx={(theme) => ({
       height: ["auto", "100px"],
       background: theme.palette.primary.black,
-      // px: [4, 6, 20],
       py: [5, 6],
       color: "primary.white",
     })}

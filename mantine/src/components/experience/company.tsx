@@ -2,15 +2,12 @@ import { Box, Flex, Text, Title } from "@mantine/core";
 import { ICompany } from ".";
 import Image from "next/image";
 import styles from "./company.module.scss";
-import useIsMobile from "@/hooks/useIsMobile";
 
 interface Props {
   company: ICompany;
 }
 
 const Company: React.FC<Props> = ({ company }) => {
-  const isMobile = useIsMobile();
-
   return (
     <Box className={styles.block}>
       <Flex

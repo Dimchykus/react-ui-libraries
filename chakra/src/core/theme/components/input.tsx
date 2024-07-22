@@ -1,5 +1,4 @@
 import { defineStyleConfig, defineStyle } from "@chakra-ui/react";
-import typography from "./typography";
 import Heading from "./heading";
 
 export const InputBaseStyles = defineStyle({

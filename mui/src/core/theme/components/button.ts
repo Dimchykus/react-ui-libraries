@@ -17,7 +17,6 @@ const Button: Components["MuiButton"] = {
       textTransform: "none",
       minWidth: "auto",
       fontWeight: "600",
-      // fontFamily: sora.style.fontFamily,
       "&:hover": {
         background: COLORS.primary.neutral,
         borderColor: COLORS.primary.neutral,

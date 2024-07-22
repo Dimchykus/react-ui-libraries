@@ -1,4 +1,4 @@
-import { Flex, Box, Text, Heading, Container } from "@chakra-ui/react";
+import { Flex, Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 interface ITestimonial {

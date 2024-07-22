@@ -1,5 +1,4 @@
-import { Flex, Box, Text, Heading, Container, Grid } from "@chakra-ui/react";
-import Socials from "../common/socials";
+import { Grid } from "@chakra-ui/react";
 import Testimonial from "./testemonial";
 
 const Testimonials = () => {

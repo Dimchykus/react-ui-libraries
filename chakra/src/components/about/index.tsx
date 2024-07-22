@@ -1,16 +1,7 @@
 "use client";
 
-import {
-  Flex,
-  Box,
-  Text,
-  Heading,
-  Container,
-  Grid,
-  chakra,
-} from "@chakra-ui/react";
-import Image, { StaticImageData } from "next/image";
-import { ReactNode } from "react";
+import { Flex, Box, Text, Heading, chakra } from "@chakra-ui/react";
+import Image from "next/image";
 import img from "../../../public/images/about.png";
 
 const ChakraImg = chakra(Image);

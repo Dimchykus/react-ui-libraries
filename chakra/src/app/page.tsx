@@ -4,7 +4,7 @@ import Hero from "@/components/hero/index";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import Experience from "@/components/experience";
-import LetsTalk from "@/components/LestTalk";
+import LetsTalk from "@/components/contactForm";
 
 export default function Home() {
   return (

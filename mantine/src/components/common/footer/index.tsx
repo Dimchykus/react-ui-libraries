@@ -1,6 +1,5 @@
-import { Stack, Box, Text, Flex, Container, Title } from "@mantine/core";
+import { Box, Text, Flex, Container, Title } from "@mantine/core";
 import Logo from "@/../public/images/logo.svg";
-import theme from "@/core/theme";
 import useIsMobile from "@/hooks/useIsMobile";
 import styles from "./index.module.scss";
 
@@ -32,7 +31,6 @@ const Footer = () => {
           >
             {!isMobile ? (
               <>
-                {" "}
                 <Title order={6} fw={500}>
                   @ 2019-2023 Personal
                 </Title>

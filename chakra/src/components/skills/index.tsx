@@ -1,6 +1,6 @@
 "use client";
 
-import { Flex, Box, Text, Heading, Container, Grid } from "@chakra-ui/react";
+import { Flex, Box, Text, Heading, Grid } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import Git from "@/../public/images/icon-git.svg";
 import Javascript from "@/../public/images/icon-javscript.svg";
@@ -59,7 +59,6 @@ const Skills = () => {
         h={[160, 186]}
         border={"2px solid"}
         borderColor={"primary.black"}
-        // у px, rem не працює
         borderRadius={4}
         transition={"all 0.2s ease-in-out"}
         cursor={"pointer"}

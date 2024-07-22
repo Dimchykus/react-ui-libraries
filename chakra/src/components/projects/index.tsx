@@ -1,7 +1,6 @@
 "use client";
 
-import { Flex, Box, Text, Heading, Container, Grid } from "@chakra-ui/react";
-import { ReactNode } from "react";
+import { Flex, Box, Heading, Container } from "@chakra-ui/react";
 import Project, { IProject } from "../project";
 import projectImg1 from "../../../public/images/project1.jpeg";
 import projectImg2 from "../../../public/images/project2.jpeg";

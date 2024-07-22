@@ -1,16 +1,7 @@
 "use client";
 
-import {
-  Flex,
-  Box,
-  Text,
-  Heading,
-  Container,
-  Grid,
-  chakra,
-} from "@chakra-ui/react";
+import { Flex, Box, Text, Heading, chakra } from "@chakra-ui/react";
 import Image, { StaticImageData } from "next/image";
-import { ReactNode } from "react";
 
 export interface IProject {
   number: number | string;

@@ -54,10 +54,6 @@ const Hero = () => {
           standard dummy text ever since the 1500s, when an unknown printer took
           a galley of type and scrambled it to specimen book.
         </Text>
-        {/* <Button>Resume</Button> */}
-        {/* <Input value={"Your name"} />
-        <Input error="error" value={"Your name"} isInvalid />
-        <Input isDisabled value={"Your name"} /> */}
       </Box>
       <Box mt={{ base: 36, sm: 100 }}>
         <Socials />

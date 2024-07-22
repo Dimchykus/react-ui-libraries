@@ -1,5 +1,4 @@
-import { Flex, Box, Text, Heading, Container } from "@chakra-ui/react";
-import Socials from "../common/socials";
+import { Flex, Box, Text } from "@chakra-ui/react";
 import { ICompany } from ".";
 import Image from "next/image";
 
